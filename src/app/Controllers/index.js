@@ -1,10 +1,4 @@
-import angular from 'angular';
-
-import './app';
-
-angular.bootstrap(document, ['App']);
-
-var moviesController = angular.controller('ArtistCtrl', ['$cookies', '$scope', function ($scope) {
+export function indexController(){
 
     var searchUrl = "https://api.spotify.com/v1/search?q="
 
@@ -21,6 +15,4 @@ var moviesController = angular.controller('ArtistCtrl', ['$cookies', '$scope', f
             alert("error");
         });
     };
-
-
-}]);
+}
