@@ -1,6 +1,8 @@
 {
   "extends": "eslint:recommended",
-  "plugins": ["angular"],
+  "plugins": [
+    "angular"
+  ],
   "env": {
     "es6": true,
     "browser": true,
@@ -12,9 +14,23 @@
   "globals": {
     "angular": true,
     "module": true,
-    "inject": true
+    "inject": true,
+    "no-console": false
   },
   "settings": {
     "angular": 2
-  }
+  
+  },
+  
+    "parserOptions": {
+      "ecmaVersion": 5,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "semi": 2
+    }
+  
 }

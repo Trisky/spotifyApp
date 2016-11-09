@@ -1,5 +1,29 @@
 .consigna__container {
   width: 50%;
+  min-width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.artistContainer{
+  width:50%;
+  float:left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#hidden {
+    display:none;
+    position:relative;
+    width: 30%;
+    height: 30%;
+    margin: auto auto;
+    align-content: center;
+    background-color: black;
+    opacity: 0.8;
+    text-align: center;
+    margin: 5% 5%;
+    padding-top: 2% 2%;
+    border: 5% 5%;     
 }

@@ -1,9 +1,23 @@
 <div class="consigna__container">
-  <h2>LA PRIMERA PAGINA DEBE MOSTRAS UN BUSCADOR Y COMO SOMOS BUENOS, YA LES DEJAMOS EL INPUT</h2>
-  <input type="text"/>
-  <button>Buscar</button>
-  <h3>FAVORITOS</h3>
-  <img src="https://i.scdn.co/image/66302ca80395b6be3600d5f0ef69db9e0c43f4f5" alt="">
-  <img src="https://i.scdn.co/image/e2b11f82ba8d5aecc6486fe28225db43a003caa1" alt="">
-  <img src="https://i.scdn.co/image/3a299e917835b053f53441280262f10829bd1c8e" alt="">
+  <div class="searchTextBox">
+    <input ng-model="searchInput" id="searchInput"></input>
+
+    <button id="search" ng-click="searchArtist()">Search!</button>
+  </div>
+
+  <table>
+    <tr class="animate-repeat" ng-repeat="a in artistsList" ng-switch on="$index % 2">
+      <td ng-switch-when="0">
+        <a href="/artist{{a.id}}">{{a.name}}</a>
+        <img src="{{a.images[2].url}}">
+      </td>
+      
+      <!--{{a.images.2}}-->
+    </tr>
+  </table>
+
+</div>
+<h3>FAVORITOS</h3>
+<img src="https://i.scdn.co/image/66302ca80395b6be3600d5f0ef69db9e0c43f4f5" alt="">
+
 </div>

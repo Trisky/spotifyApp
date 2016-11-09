@@ -1,14 +1,23 @@
 <div>
-    <h2>EN ESTA SECCION TIENE QUE APARECER LA TAPA DEL DISCO SELECCIONADO JUNTO CON LA LISTA DE TEMAS QUE TIENE EL DISCO.</h2>
-    <img src="https://i.scdn.co/image/66302ca80395b6be3600d5f0ef69db9e0c43f4f5" alt="">
-    <ul>
-        <li>Track 1</li>
-        <li>Track 2</li>
-        <li>Track 3</li>
-        <li>Track 4</li>
-        <li>Track 5</li>
-        <li>Track 6</li>
-        <li>Track 7</li>
-        <li>Track 8</li>
-    </ul>
+    <h2>mostrar imagen y nombre album</h2>
+    <!--<section id="hidden">-->
+        
+        <!--<section>
+            <audio controls>
+                <source src="{{$scope.previewUrl}}" type="audio/ogg">
+            </audio>
+            <button type="button" id="hideButton">Close</button>
+        </section>-->
+
+        <table>
+            <tr class="animate-repeat" ng-repeat="t in trackList">
+                <td>
+                    {{t.name}}
+                </td>
+                <td>
+                    <button ng-click="addFavorite(t.id)">ADD</button>
+                    <button ng-click="playSong($index)">PLAY</button>
+                </td>
+            </tr>
+        </table>
 </div>
