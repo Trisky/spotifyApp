@@ -7,7 +7,7 @@ import {albumController} from './controllers';
 
 angular.module('App', ['ngRoute'])
     .config(routes)
-    .service('ApiService', ApiService)
+    .service('ApiService',['$http', ApiService])
     .controller('indexController',indexController)
-    .controller('artistController',artistController)
+    .controller('artistController',['$scope','ApiService','$http', '$routeParams',artistController])
     .controller('albumController',albumController);

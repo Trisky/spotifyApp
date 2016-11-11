@@ -6,18 +6,16 @@
   </div>
 
   <table>
-    <tr class="animate-repeat" ng-repeat="a in artistsList" ng-switch on="$index % 2">
-      <td ng-switch-when="0">
+    <tr class="animate-repeat" ng-repeat="a in artistsList">
+      <td>
         <a href="/artist{{a.id}}">{{a.name}}</a>
         <img src="{{a.images[2].url}}">
       </td>
-      
-      <!--{{a.images.2}}-->
     </tr>
   </table>
 
 </div>
 <h3>FAVORITOS</h3>
-<img src="https://i.scdn.co/image/66302ca80395b6be3600d5f0ef69db9e0c43f4f5" alt="">
+...
 
 </div>
