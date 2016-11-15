@@ -15,7 +15,7 @@
                     {{t.name}}
                 </td>
                 <td>
-                    <button ng-click="addFavorite(t.id)">ADD</button>
+                    <button ng-click="this.toggleFavorite(t)">ADD</button>
                     <button ng-click="playSong($index)">PLAY</button>
                 </td>
             </tr>

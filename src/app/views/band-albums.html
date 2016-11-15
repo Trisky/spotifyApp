@@ -1,9 +1,9 @@
 
 {{ArtistName}}
   <table>
-    <tr class="animate-repeat" ng-repeat="a in albumsList" ng-switch on="$index % 2">
+    <tr class="animate-repeat" ng-repeat="a in albumsList">
         
-      <td ng-switch-when="0">
+      <td>
         <a href="/album{{a.id}}">{{a.name}}</a>
         <img src="{{a.images[2].url}}">
       </td>

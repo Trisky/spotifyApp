@@ -7,9 +7,13 @@ module.exports = {
     },
     module: {
         loaders: [{
-             test: /\.js$/,
-             exclude: /node_modules/,
-             loader: 'babel-loader',
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+        },
+        {
+            test: /\.(eot|svg|ttf|woff|woff2)$/,
+            loader: 'file?name=public/fonts/[name].[ext]'
         }]
     },
     cache: true,
@@ -28,3 +32,6 @@ module.exports = {
         },
     }
 };
+
+
+

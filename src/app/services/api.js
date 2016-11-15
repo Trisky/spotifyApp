@@ -1,14 +1,11 @@
+"use strict";
 export function ApiService($http) {
-
-    //mirar xq no esta bindeado
-
-    var foundArtists;
-    this.getInfo = function (searchTerm, funcion) {
+    this.getInfo = function (searchTerm) {
         return $http({
             method: 'GET',
             url: searchTerm
-        }).then(function successCallback(response) {
-            funcion(response);
+        }).then(response => {
+            return response.data;
         }, function errorCallback(response) {
             console.error();
             console.log(response);
@@ -24,5 +21,4 @@ export function ApiService($http) {
     this.saveFoundArtists = function (response) {
         foundArtists = response.data.artists.items;
     };
-
 }
