@@ -1,20 +1,40 @@
-export function favoritesService($cookies) {
+export function favoritesService($localStorage) {
 
-    this.toggle = function (item) {
-        console.log("fav");
-        var track = $cookies.getObject(item.id);
-        if (track == undefined) this.add(item);
-        else $cookies.remove(item.id);
-        console.log($cookies);
+    $localStorage.favs = $localStorage.favs || [];
+
+    this.toggle = function(item) {
+        var track = $localStorage.favs.find(this.getTrackById(item));
+        // console.log(track);
+        if (!track)
+            $localStorage.favs.push(item);
+        else
+            this.removeTrack(item);
+        console.log($localStorage);
     };
-    this.add = function (item) {
-        console.log(item);
-        $cookies.putObject(item.id, item);
+
+    this.getFavorites = function() {
+        return $localStorage.favs;
     };
-    //     function Track(item) {
-    //         this.name = item.name;
-    //         this.artist = item.artists[0].name;
-    //         this.id = item.id;
-    //         this.href = item.href;
-    //     }
+
+
+    this.getTrackById = function(item) {
+        return function(element) {
+            return element.id === item.id;
+        };
+    };
+    this.removeTrack = function(item) {
+        var favs = $localStorage.favs;
+        var index = favs.indexOf(item);
+        if (index > -1) {
+            favs.splice(index, 1);
+        }
+    };
+
+    function Track(item) {
+        this.artist = item.artists[0].name;
+        this.name = item.name;
+        this.href = item.href;
+        this.id = item.id;
+
+    }
 }

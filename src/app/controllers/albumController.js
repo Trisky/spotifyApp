@@ -11,7 +11,6 @@ export function albumController($scope, $http, $routeParams, ApiService, favorit
 
     $scope.toggleFavorite = function (item) { //recieves a track item
         favoritesService.toggle(item);
-
     };
     $scope.playSong = function (trackId) {
         $scope.previewUrl = $scope.trackList[trackId].preview_url;

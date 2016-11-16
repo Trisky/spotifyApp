@@ -16,6 +16,12 @@
 
 </div>
 <h3>FAVORITOS</h3>
-...
-
+<ul>
+  <li ng-repeat="t in favoritesLst">
+    <div>name: {{t.name}}</div>
+    <div>artist: {{t.artists[0].name}}<div>
+    <div class=deleteFavorite ng-action="removeFavorite({{t}})"><button>delete</button></div>
+    <div class=play ng-action"togglePlay(t.href)">toggle</div>
+  </li>
+</ul>
 </div>

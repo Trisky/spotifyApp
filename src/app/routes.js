@@ -10,7 +10,6 @@ export function routes($routeProvider, $locationProvider) {
         .when('/', {
             templateUrl: './app/views/index.html',
             controller: 'indexController',
-
         })
         .when('/artist:id', {
             templateUrl: './app/views/band-albums.html',

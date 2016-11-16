@@ -17,12 +17,13 @@ module.exports = {
         }]
     },
     cache: true,
-    devtool: 'cheap-module-source-map',
+    devtool: 'inline-source-map',
+    debug: true,
     devServer: {
         filename: "index.bundle.js",
         contentBase: "./src",
         port: 3000,
-        open: true,
+        open: false,
         watch: true,
         publicPath: "/",
         historyApiFallback: true,
