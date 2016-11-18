@@ -1,27 +1,25 @@
-<div class="consigna__container">
-  <div class="searchTextBox">
-    <input ng-model="searchInput" id="searchInput"></input>
+<div class="searchBox" id="standAloneSB">
+  <input ng-model="searchInput" id="searchInput" placeholder="lupita"></input>
 
-    <button id="search" ng-click="searchArtist()">Search!</button>
-  </div>
-
-  <table>
-    <tr class="animate-repeat" ng-repeat="a in artistsList">
-      <td>
-        <a href="/artist{{a.id}}">{{a.name}}</a>
-        <img src="{{a.images[2].url}}">
-      </td>
-    </tr>
-  </table>
-
+  <button id="search" ng-click="searchArtist()">Search!</button>
 </div>
-<h3>FAVORITOS</h3>
-<ul>
-  <li ng-repeat="t in favoritesLst">
-    <div>name: {{t.name}}</div>
-    <div>artist: {{t.artists[0].name}}<div>
-    <div class=deleteFavorite ng-action="removeFavorite({{t}})"><button>delete</button></div>
-    <div class=play ng-action"togglePlay(t.href)">toggle</div>
+
+<ul class="artistsResult">
+  <li ng-repeat="a in artistsList" ng-click="viewArtist(a)">
+    <albumName>{{a.name}}</albumname>
+    <img src="{{a.images[2].url}}">
+    
+    <!--<a href="/artist{{a.id}}"></a>-->
   </li>
 </ul>
+<div class="favoritesContainer">
+  <h3>Favorites:</h3>
+  <ul>
+    <li ng-repeat="t in favoritesLst">
+      <div class="trackName">name: {{t.name}}</div>
+      <div class="trackArtist">artist: {{t.artists[0].name}}</div>
+      <p class="fa play " ng-action="togglePlay(t.href)"></p>
+      <div class="toggleFav fa fa-star" ng-action="removeFav(t)">remove</div>
+    </li>
+  </ul>
 </div>

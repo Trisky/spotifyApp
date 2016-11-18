@@ -14,14 +14,11 @@ import { favoritesDirective } from './directives';
 
 //font-awesome
 //require('./fonts/font-darkenstone/darkenstone.scss');
-
-
-
 angular.module('App', ['ngRoute', 'ngStorage', 'ngCookies'])
     .config(routes)
     .service('ApiService', ['$http', ApiService])
     .service('favoritesService', ['$localStorage', favoritesService])
-    .controller('indexController', ['$scope', '$http','favoritesService', 'ApiService', indexController])
-    .controller('artistController', ['$scope', '$http', '$routeParams', 'ApiService', artistController])
+    .controller('indexController', ['$scope', '$http', '$location', 'favoritesService', 'ApiService', indexController])
+    .controller('artistController', ['$scope', '$location', '$http', '$routeParams', 'ApiService', artistController])
     .controller('albumController', ['$scope', '$http', '$routeParams', 'ApiService', 'favoritesService', albumController]) //to show the tracks
-    .directive('favoritesDirective',['favoritesService',favoritesDirective] );
+    .directive('favoritesDirective', ['favoritesService', favoritesDirective]);

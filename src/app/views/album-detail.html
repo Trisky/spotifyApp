@@ -1,23 +1,11 @@
 <div>
-    <h2>mostrar imagen y nombre album</h2>
-    <!--<section id="hidden">-->
-        
-        <!--<section>
-            <audio controls>
-                <source src="{{$scope.previewUrl}}" type="audio/ogg">
-            </audio>
-            <button type="button" id="hideButton">Close</button>
-        </section>-->
-
-        <table>
-            <tr class="animate-repeat" ng-repeat="t in trackList">
-                <td>
-                    {{t.name}}
-                </td>
-                <td>
-                    <button ng-click="this.toggleFavorite(t)">ADD</button>
-                    <button ng-click="playSong($index)">PLAY</button>
-                </td>
-            </tr>
-        </table>
+    <img src="{{albumImage}}"> {{albumName}}
+    <ul>
+        <li ng-repeat="t in trackList">
+            {{$index+1 }}- {{t.name}}
+            <!--<img src="{{t.images[1].url}}"></img>-->
+            <button ng-click="this.toggleFavorite(t)">ADD</button>
+            <button ng-click="playSong($index)">PLAY</button>
+        </li>
+    </ul>
 </div>

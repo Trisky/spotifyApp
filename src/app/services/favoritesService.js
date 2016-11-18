@@ -35,6 +35,5 @@ export function favoritesService($localStorage) {
         this.name = item.name;
         this.href = item.href;
         this.id = item.id;
-
     }
 }

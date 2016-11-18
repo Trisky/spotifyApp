@@ -18,6 +18,8 @@ export function ApiService($http) {
         this.getInfo(url, this.saveFoundArtists);
 
     };
+    var selectedArtist;
+    var selectedAlbum;
     // this.saveFoundArtists = function(response) {
     //     foundArtists = response.data.artists.items;
     // };

@@ -1,3 +1,4 @@
+/*----------header-----------*/
 .consigna__container {
   width: 50%;
   min-width: 400px;
@@ -5,36 +6,87 @@
   margin-right: auto;
 }
 
+.logo{
+	width: 10%;
+  height:10%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.searchBox{
+  float:right;
+  display:block;  
+}
+
+/*-------artist---------*/
 .artistContainer{
   width:50%;
   float:left;
   margin-left: auto;
   margin-right: auto;
+  border: 1px;
+}
+.favoritesContainer{
+  width:100%;
+ 
+  border-color: white;
+}
+.artistsResult{
+  margin-top:3%;
 }
 
 
-#hidden {
-    display:none;
-    position:relative;
-    width: 30%;
-    height: 30%;
-    margin: auto auto;
-    align-content: center;
-    background-color: black;
-    opacity: 0.8;
-    text-align: center;
-    margin: 5% 5%;
-    padding-top: 2% 2%;
-    border: 5% 5%;     
+/*----------list-----------*/
+li {
+   border: 1px solid white;
+  list-style-type: none;
+  padding-top: 3%;
+}
+
+.play,.toggleFav{
+  float:right;
+  margin-right: 2%;
+  display: block;
+}
+
+trackName,trackArtist{
+  float:left;
+  display: block;
+}
+
+
+/*-------band-----*/
+.band_img{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-right: 3%;
 }
 
 body{
   background-color: black;
   color:white;
-  
+  align-self: center;  
 }
 
 *{
-  font-family: 'Comic Sans MS';
-  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.align-left{
+  align-items: left;
+}
+.align-right{
+  align-items:right;
+}
+.col-1{ width: 16.66%; }
+.col-2{ width: 33.33%; }
+.col-3{ width: 50%;    }
+.col-4{ width: 66.66%; }
+.col-5{ width: 83.33%; }
+.col-6{ width: 100%;   }
+
+a {
+    color: white;
 }
