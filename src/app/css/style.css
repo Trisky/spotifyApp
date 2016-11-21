@@ -1,0 +1,250 @@
+html{
+	background-color: black;
+	color:white;
+	box-sizing: border-box;
+}
+li {
+	list-style-type: none;
+	border: 1px solid white;
+	margin-top: 5px;
+}
+
+hr{
+	border:2px solid green;
+	border-radius: 200px;
+}
+footer{
+	height: 5%;
+
+	margin-top: 45%;
+}
+
+input,button{
+	border-radius: 200px;
+}
+
+p{
+	margin-top: 8%;
+	font-size: 30px;
+	color:#808080	;
+}
+
+a:active {
+    color: white;
+    text-decoration: none !important;
+}
+a:hover {
+	color: green;
+    text-decoration: none !important;
+}
+a:visited {
+    text-decoration: none !important;
+}
+
+.logo{
+	width: 10%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.button_search{
+	width: 10%;
+	float: right;
+}
+/*==================================HOME===========================*/
+.home_title{
+	font-size: 80px;
+	color:green;
+	margin-top: 0%;
+}
+
+.home_img{
+	width: 100%;
+	float: left;
+	margin-right: 3%;
+}
+.home_item_title{
+	margin-top: 0%;
+	margin-bottom: 4px;
+	max-height: 10px;
+}
+.home_item_data{
+	margin-bottom: 0%;
+	font-size: 20px;
+	width: 80%;
+}
+
+.play{
+	float: right;
+	padding-top: 50%;
+	margin-right: 5%;	
+	width: 10%;
+}
+/*==================================END HOME===========================*/
+
+/*==================================ARTISTS===========================*/
+.result_search{
+	background:white url("../img/lupa.png") left no-repeat;
+	background-size: 20px 20px;
+	line-height: 25px;
+	text-indent: 30px;
+	margin-bottom: 8%;
+	width: 80%;
+}
+
+.result_img{
+	width: 80px;
+	height: 80px;
+	float: left;
+	margin-right: 3%;
+}
+
+.result_item_title{
+	margin-top: 0%;
+	margin-bottom: 4px;
+}
+
+
+/*==================================END ARTISTS===========================*/
+
+.column.five.artist_search{
+	float:right;
+	margin-top: 3%;
+}
+/*==================================ALBUMS===========================*/
+.band_header{
+	position: relative;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	height: 30%;	
+}
+.band_title_img{
+	float: left;
+	width: 400px;
+	height: 300px;
+}
+
+h1.band_name{
+	width: 40%;
+	font-size: 40px;
+	margin-left: 30%;
+}
+
+.band_img{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-right: 3%;
+}
+
+.band_item_title{
+	margin-top: 0%;
+	margin-bottom: 4px;
+}
+.band_item_data{
+	margin-top: 0%;
+	margin-bottom: 4px;
+	font-size: 20px;
+}
+
+/*==================================END ALBUMS===========================*/
+
+/*==================================TRACKS===========================*/
+.album_header{
+	position: relative;
+	margin-top: 5%;
+	margin-bottom: 15%;
+	height: 30%;	
+}
+.album_title_img{
+	float: left;
+	width: 20%;
+}
+h1.album_name{
+	width: 40%;
+	font-size: 40px;
+	margin-left: 25%;
+}
+
+h2.album_band{
+	width: 40%;
+	font-size: 25px;
+	margin-left: 25%;
+}
+
+p.album_cd{
+	width: 90%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	float: left;
+}
+
+li.column.eight.album{
+	margin-top: 2%;
+	border:1px;
+	border:1px solid white;
+}
+hr.album{
+	border:1px solid white;
+}
+p.track_star{
+	width: 10%;
+	float: right;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.album_item_title{
+	margin-top: 0%;
+	margin-bottom: 4px;
+}
+.album_item_data{
+	margin-top: 0%;
+	margin-bottom: 4px;
+	font-size:15px;
+	color:#A9A9A9;
+}
+
+/*==================================END TRACKS===========================*/
+
+
+.consigna__container {
+  margin-left: 16.66%;
+  margin-right: 16.66%;
+}
+
+.column.full { width: 100%; }	
+.column.eleven{width: 91.63%;}
+.column.ten{width: 83.3%;}
+.column.nine{width: 74.97%;}
+.column.eight{width: 66.64%;}
+.column.seven{width: 58.31%;}
+.column.six{width: 49%;}
+.column.five{width: 41.65%;}
+.column.four{width: 33.32%;}
+.column.three{width: 24.99%;}
+.column.two{width: 16.66%;}
+.column.one{width: 8.33%;}
+.column.opposite { float: right; }  
+
+.column{
+	float: left;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 701px){
+	.consigna__container {
+  		margin-left: 0%;
+  		margin-right: 0%;
+	}
+	.column.eight{width: 100%;}
+}
+@media screen and (max-width: 700px){
+	.consigna__container {
+  		margin-left: 0%;
+  		margin-right: 0%;
+	}
+	.column.six{width: 100%;}
+	.column.eight{width: 100%;}
+
+}
+
+
