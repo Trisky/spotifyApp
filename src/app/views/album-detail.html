@@ -1,11 +1,17 @@
 <div>
-    <img src="{{albumImage}}"> {{albumName}}
-    <ul>
-        <li ng-repeat="t in trackList">
-            {{$index+1 }}- {{t.name}}
-            <!--<img src="{{t.images[1].url}}"></img>-->
-            <button ng-click="this.toggleFavorite(t)">ADD</button>
-            <button ng-click="playSong($index)">PLAY</button>
-        </li>
-    </ul>
+    <img class="album_title_img" src="{{albumImage}}">
+    <h1 class="h1 album_name"> {{albumName}}</div>
+<ul>
+    <li class="column eight album">
+        <div ng-repeat="t in trackList">
+            <h3>
+                <p class="album_cd">{{t.name}}</p>
+            </h3>
+            <p class="track_star" ng-click="toggleFavorite(t)">
+                <i ng-class="[{'fa fa-star':favorited(t.id),
+                                    'fa fa-star-o':!favorited(t.id) } ]" aria-hidden="true">
+                </i></p>
+        </div>
+    </li>
+</ul>
 </div>

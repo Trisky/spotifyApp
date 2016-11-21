@@ -25,8 +25,8 @@ input,button{
 
 p{
 	margin-top: 8%;
-	font-size: 30px;
-	color:#808080	;
+	font-size: 25px;
+	color:white	;
 }
 
 a:active {
@@ -34,7 +34,7 @@ a:active {
     text-decoration: none !important;
 }
 a:hover {
-	color: green;
+	color: lightgreen;
     text-decoration: none !important;
 }
 a:visited {
@@ -78,6 +78,12 @@ a:visited {
 	float: right;
 	padding-top: 50%;
 	margin-right: 5%;	
+	width: 10%;
+}
+.play_remove{ 
+	float: right;
+	padding-top: 80%;
+	margin-right: -10%;	
 	width: 10%;
 }
 /*==================================END HOME===========================*/
@@ -159,6 +165,7 @@ h1.band_name{
 .album_title_img{
 	float: left;
 	width: 20%;
+	padding-right:5%;
 }
 h1.album_name{
 	width: 40%;
@@ -168,7 +175,7 @@ h1.album_name{
 
 h2.album_band{
 	width: 40%;
-	font-size: 25px;
+	font-size: 19px;
 	margin-left: 25%;
 }
 
@@ -201,7 +208,13 @@ p.track_star{
 	margin-top: 0%;
 	margin-bottom: 4px;
 	font-size:15px;
-	color:#A9A9A9;
+
+}
+align-right{
+	float:right !important;
+}
+align-right{
+	float:left !important;
 }
 
 /*==================================END TRACKS===========================*/
@@ -230,14 +243,14 @@ p.track_star{
 	float: left;
 }
 
-@media screen and (max-width: 1000px) and (min-width: 701px){
+@media screen and (max-width: 1000px) and (min-width: 651px){
 	.consigna__container {
   		margin-left: 0%;
   		margin-right: 0%;
 	}
 	.column.eight{width: 100%;}
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 650px){
 	.consigna__container {
   		margin-left: 0%;
   		margin-right: 0%;
@@ -247,4 +260,6 @@ p.track_star{
 
 }
 
-
+*{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

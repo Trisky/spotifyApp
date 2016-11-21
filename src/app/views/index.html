@@ -3,23 +3,36 @@
 
   <button id="search" ng-click="searchArtist()">Search!</button>
 </div>
+<div>
+  <ul class="artistsResult">
+    <li class="column six" ng-repeat="a in artistsList" ng-click="viewArtist(a)">
 
-<ul class="artistsResult">
-  <li ng-repeat="a in artistsList" ng-click="viewArtist(a)">
-    <albumName>{{a.name}}</albumname>
-    <img src="{{a.images[2].url}}">
-    
-    <!--<a href="/artist{{a.id}}"></a>-->
-  </li>
-</ul>
-<div class="favoritesContainer">
+      <img class="align-left" src="{{a.images[2].url}}">
+      <p class="align-right">{{a.name}}</p>
+    </li>
+  </ul>
+</div>
+<div class="column full" ng-if="favoritesLst">
   <h3>Favorites:</h3>
   <ul>
-    <li ng-repeat="t in favoritesLst">
-      <div class="trackName">name: {{t.name}}</div>
-      <div class="trackArtist">artist: {{t.artists[0].name}}</div>
-      <p class="fa play " ng-action="togglePlay(t.href)"></p>
-      <div class="toggleFav fa fa-star" ng-action="removeFav(t)">remove</div>
+    <li class="column six" ng-repeat="t in favoritesLst">
+      <div class="column three">
+        <img src="{{t.image}}" alt="" class="home_img">
+      </div>
+      <div class="column six">
+        <h2 class="home_item_title">{{t.name}}</h2>
+        <div class="fav">
+          <p class="home_item_data">{{t.artists}}
+            <p>
+              <p class="home_item_data">{{t.albumName}}</p>
+        </div>
+      </div>
+      <div class="column one">
+        <a href="{{t.href}}" target="_blank">
+          <p class="play"><i class="fa fa-play" aria-hidden="true"></i></p>
+        </a>
+        <!--<p class="play_remove"><i class="fa fa fa-star" aria-hidden="true" ng-action="removeFav(t)"></i></p>-->
+      </div>
     </li>
   </ul>
 </div>

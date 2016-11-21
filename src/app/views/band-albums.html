@@ -1,11 +1,11 @@
 <div class="ArtistResultName">
   <img src="{{artistImage}}">
   
-  {{ArtistName}}</div>
+  <h1>{{ArtistName}}</h1></div>
 <ul>
-  <li ng-repeat="a in albumsList" ng-click="goToAlbum(a)">
-    <img src="{{a.images[2].url}}">
-    <a href="/album{{a.id}}">{{a.name}}</a>
+  <li class="column six" ng-repeat="a in albumsList" ng-click="goToAlbum(a)">
+    <img class="column three" src="{{a.images[2].url}}">
+   <p> {{a.name}}  </p>
     
   </li>
 </ul>
