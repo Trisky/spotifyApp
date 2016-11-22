@@ -1,6 +1,6 @@
 "use strict";
 export function ApiService($http) {
-    this.getInfo = function(searchTerm) {
+    this.getInfo = function (searchTerm) {
         return $http({
             method: 'GET',
             url: searchTerm
@@ -12,7 +12,7 @@ export function ApiService($http) {
         });
     };
 
-    this.getArtists = function(string) {
+    this.getArtists = function (string) {
         var searchUrl = "https://api.spotify.com/v1/search?q=";
         var url = searchUrl + string + '&type=artist';
         this.getInfo(url, this.saveFoundArtists);
@@ -20,7 +20,4 @@ export function ApiService($http) {
     };
     var selectedArtist;
     var selectedAlbum;
-    // this.saveFoundArtists = function(response) {
-    //     foundArtists = response.data.artists.items;
-    // };
 }

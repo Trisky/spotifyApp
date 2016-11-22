@@ -1,24 +1,40 @@
 import { routes } from './routes';
-import { ApiService } from './services';
 import 'angular-cookies';
 import 'ngstorage';
 
 //services
 import { favoritesService } from './services';
+import { ApiService } from './services';
+import { ArtistsService } from './services';
 
 //controllers
 import { indexController } from './controllers';
 import { artistController } from './controllers';
 import { albumController } from './controllers';
-import { favoritesDirective } from './directives';
+import { searchController } from './controllers';
 
-//font-awesome
-//require('./fonts/font-darkenstone/darkenstone.scss');
+//directives
+import { PlayerDirective } from './directives';
+
 angular.module('App', ['ngRoute', 'ngStorage', 'ngCookies'])
     .config(routes)
     .service('ApiService', ['$http', ApiService])
     .service('favoritesService', ['$localStorage', favoritesService])
-    .controller('indexController', ['$scope', '$http', '$location', 'favoritesService', 'ApiService', indexController])
-    .controller('artistController', ['$scope', '$location', '$http', '$routeParams', 'ApiService', artistController])
-    .controller('albumController', ['$scope', '$http', '$routeParams', 'ApiService', 'favoritesService', albumController]) //to show the tracks
-    .directive('favoritesDirective', ['favoritesService', favoritesDirective]);
+    .service('ArtistsService', ['$localStorage', ArtistsService])
+
+    .controller('searchController', ['$scope', '$location', '$routeParams', 'ApiService', 'ArtistsService',
+        searchController])
+
+    .controller('indexController', ['$scope', '$location', 'favoritesService',
+        indexController])
+
+    .controller('artistController', ['$scope', '$location', '$routeParams', 'ArtistsService',
+         'ApiService', artistController])
+
+    .controller('albumController', ['$scope', '$http', '$routeParams',
+        'ApiService', 'favoritesService', albumController])
+
+    .directive('player', PlayerDirective);
+
+
+    //$scope, $location, $routeParams, ArtistsService, ApiService

@@ -1,17 +1,9 @@
 <div class="searchBox" id="standAloneSB">
-  <input ng-model="searchInput" id="searchInput" placeholder="lupita"></input>
+    <input ng-model="searchInput" id="searchInput" placeholder="Search here"></input>
 
-  <button id="search" ng-click="searchArtist()">Search!</button>
+    <button id="search" ng-click="searchArtist()">Search!</button>
 </div>
-<div>
-  <ul class="artistsResult">
-    <li class="column six" ng-repeat="a in artistsList" ng-click="viewArtist(a)">
 
-      <img class="align-left" src="{{a.images[2].url}}">
-      <p class="align-right">{{a.name}}</p>
-    </li>
-  </ul>
-</div>
 <div class="column full" ng-if="favoritesLst">
   <h3>Favorites:</h3>
   <ul>

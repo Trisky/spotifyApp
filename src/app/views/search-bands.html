@@ -1,0 +1,9 @@
+<div>
+  <ul class="artistsResult">
+    <li class="column six" ng-repeat="a in artistsList" ng-click="viewArtist(a)">
+
+      <img class="align-left" src="{{a.images[2].url}}">
+      <p class="align-right">{{a.name}}</p>
+    </li>
+  </ul>
+</div>
