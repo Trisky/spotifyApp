@@ -1,9 +1,11 @@
-export function albumController($scope, $http, $routeParams, ApiService, favoritesService) {
+export function albumController($scope, $http, $routeParams, ApiService, favoritesService, ArtistsService) {
     var albumID = $routeParams.id;
     var searchTerm = 'https://api.spotify.com/v1/albums/' + albumID + '/tracks';
-    $scope.albumImage = ApiService.selectedAlbum.images[2].url;
-    $scope.albumName = ApiService.selectedAlbum.name;
-    console.log(ApiService.selectedAlbum);
+    $scope.album = ArtistsService.getAlbum(albumID);
+    $scope.orderList = 'duration_ms';
+
+    $scope.albumImage = $scope.album.image;
+    $scope.albumName = $scope.album.name;
 
     ApiService.getInfo(searchTerm, this.showAlbums)
         .then(data => { this.showTracks(data); });
@@ -14,7 +16,7 @@ export function albumController($scope, $http, $routeParams, ApiService, favorit
     };
 
     $scope.toggleFavorite = function (item) { //recieves a track item
-        favoritesService.toggle(item, ApiService.selectedAlbum);
+        favoritesService.toggle(item, $scope.album);
     };
     $scope.playSong = function (trackId) {
         $scope.previewUrl = $scope.trackList[trackId].preview_url;
@@ -23,6 +25,14 @@ export function albumController($scope, $http, $routeParams, ApiService, favorit
     $scope.favorited = function (id) {
         return favoritesService.isFavorited(id);
     };
+
+    $scope.orderByDuration = function () {
+        $scope.orderList = 'duration_ms';
+    };
+    $scope.orderByNumber = function () {
+        $scope.orderList = 'track_number';
+    };
+
 
 
 }

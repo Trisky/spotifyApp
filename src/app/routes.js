@@ -8,19 +8,19 @@ export function routes($routeProvider, $locationProvider) {
     });
     $routeProvider
         .when('/', {
-            templateUrl: './app/views/index.html',
+            templateUrl: '/app/views/index.html',
             controller: 'indexController',
         })
-        .when('/search:id',{
-            templateUrl: './app/views/search-bands.html',
+        .when('/search/:id',{
+            templateUrl: '/app/views/search-bands.html',
             controller: 'searchController',
         })
-        .when('/artist:id', {
-            templateUrl: './app/views/band-albums.html',
+        .when('/artist/:id', {
+            templateUrl: '/app/views/band-albums.html',
             controller: 'artistController'
         })
-        .when('/album:id', {
-            templateUrl: './app/views/album-detail.html',
+        .when('/album/:id', {
+            templateUrl: '/app/views/album-detail.html',
             controller: 'albumController',
         });
 }

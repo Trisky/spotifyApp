@@ -19,6 +19,9 @@ export function artistController($scope, $location, $routeParams, ArtistsService
 
     $scope.goToAlbum = function (a) {
         ApiService.selectedAlbum = a;
-        $location.path('album' + a.id);
+        $location.path('album/' + a.id);
+        ArtistsService.saveAlbum(a);
     };
 }
+
+

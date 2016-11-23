@@ -19,6 +19,6 @@ export function searchController($scope, $location, $routeParams, ApiService, Ar
     };
     $scope.viewArtist = function (artist) {
         ApiService.selectedArtist = artist;
-        $location.path('artist' + artist.id);
+        $location.path('artist/' + artist.id);
     };
 }

@@ -1,20 +1,22 @@
-export function PlayerDirective() {
+export function searchDirective() {
     return {
         restrict: 'E',
         link: dLink,
         scope: {
-            play: '=',
-            trackId: '<',
-            playToggle: '&'
+            searchTerm: '='
         },
-        templateUrl: 'app/directives/player.html',
-        controller: playerController
+        templateUrl: '/app/directives/searchBar.html',
+        controller: searchController
     };
 }
 
-function dLink() { }
+function dLink() { } //para modificar el html
 
-function playerController() {
-    
+function searchController($scope, $location) {
+    $scope.searchArtist = function() {
+        $location.path("search/" + $scope.searchInput);
+    };
+
+
 
 }

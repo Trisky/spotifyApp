@@ -14,7 +14,7 @@ import { albumController } from './controllers';
 import { searchController } from './controllers';
 
 //directives
-import { PlayerDirective } from './directives';
+import { searchDirective } from './directives';
 
 angular.module('App', ['ngRoute', 'ngStorage', 'ngCookies'])
     .config(routes)
@@ -32,9 +32,9 @@ angular.module('App', ['ngRoute', 'ngStorage', 'ngCookies'])
          'ApiService', artistController])
 
     .controller('albumController', ['$scope', '$http', '$routeParams',
-        'ApiService', 'favoritesService', albumController])
+        'ApiService', 'favoritesService','ArtistsService', albumController])
 
-    .directive('player', PlayerDirective);
+    .directive('searchBar', searchDirective);
 
 
     //$scope, $location, $routeParams, ArtistsService, ApiService

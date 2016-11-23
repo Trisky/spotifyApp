@@ -54,6 +54,6 @@ export function favoritesService($localStorage) {
         this.href = item.preview_url;
         this.id = item.id;
         this.albumName = album.name;
-        this.image = album.images[2].url;
+        this.image = album.image;
     }
 }
