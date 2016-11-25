@@ -3,10 +3,10 @@
   <ul>
     <li class="column six" ng-if="favoritesLst" ng-repeat="t in favoritesLst">
       <div class="column three">
-        <img src="{{t.image}}" alt="" class="home_img">
+        <img ng-src="{{t.image}}" alt="" class="home_img">
       </div>
       <div class="column six">
-        <h2 class="home_item_title">{{t.name}}</h2>
+        <h4 class="home_item_title">{{t.name}}</h4>
         <div class="fav">
           <p class="home_item_data">{{t.artists}}
             <p>

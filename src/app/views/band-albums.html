@@ -1,11 +1,14 @@
-<div class="ArtistResultName">
-  <img src="{{artistImage}}">
+
+  <div class="band_header">
+  <img class="band_title_img" ng-src="{{artistImage}}">
 
   <h1>{{ArtistName}}</h1>
 </div>
+<div>
 <ul>
   <li class="column six" ng-repeat="a in albumsList" ng-click="goToAlbum(a)">
-    <img class="column three" src="{{a.images[2].url}}">
-    <p> {{a.name}} </p>
+    <img class="column three result_img" ng-src="{{a.images[2].url}}">
+    <p class="band_item_data" > {{a.name}} </p>
   </li>
 </ul>
+</div>
